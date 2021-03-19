@@ -1,0 +1,66 @@
+form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.input-labels {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: silver;
+    font-weight: bolder;
+}
+
+input , textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    height: 40px;
+    font-size: large;
+    color: silver;
+    background-color: rgba(30, 36, 44, 0.4);
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    margin-top: 0.5rem;
+    height: 160px;
+}
+
+.textarea-labels {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: silver;
+    font-weight: bolder;
+}
+
+input::placeholder, textarea::placeholder {
+    color: silver;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.send-message {
+    margin-top: 1rem;
+    width: 40%;
+    border: 1px solid silver;
+    background-color: rgba(30, 36, 44, 0.4);
+}
+
+.send-message:hover {
+    cursor: pointer;
+}

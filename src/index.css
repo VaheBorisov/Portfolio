@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-image: url(./photos/BGImage.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.page-links {
+  text-decoration: none;
+  font-size: large;
+  color: white;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.page-links:hover {
+  transition: all 0.5s;
+  color: #e31b6d;
+}
+
+.active {
+  color: #e31b6d;
 }
