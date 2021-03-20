@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+
+import { device } from '../../mediaBreakPoints'
+
 import { FaFacebookSquare, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 
@@ -53,7 +56,7 @@ function Header(props) {
 }
 
 const Container = styled.div`
-    max-width: 1440px;
+    max-width: 1050px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -65,18 +68,29 @@ const Container = styled.div`
 const Nav = styled.div`
     width: 100%;
     height: 85px;
-
+    background-color: rgba(250, 250, 250, 0.05);
+    margin-bottom: 2rem;
 `;
 
 const NavPages = styled.div`
-    width: 30%
+    width: 30%;
+    @media screen and (max-width: 550px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
 `;
 
 const NavToSocial = styled.div`
-    width: 10%;
+    width: 20%;
     display: flex;
     justify-content: space-evenly;
-
+    @media screen and (${device.tablet}) {
+        width: 30%
+    }
+    @media screen and (max-width: 550px) {
+        display: none
+    }
 `;
 
 const LinkToSocial = styled.a(props => ({

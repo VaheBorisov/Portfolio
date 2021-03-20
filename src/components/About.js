@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import Port from '../photos/meIMG.jpg';
 
-import { DiResponsive } from 'react-icons/di'
-import { GiBedLamp, GiRocket, GiSpeedometer } from 'react-icons/gi'
+import { DiResponsive } from 'react-icons/di';
+import { GiBedLamp, GiRocket, GiSpeedometer } from 'react-icons/gi';
 
-
+import { device } from '../mediaBreakPoints';
 
 export default function About() {
 
@@ -103,22 +103,43 @@ export default function About() {
     )
 };
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1050px;
+    width: 100%;
+    height: 100%;
+`;
+
+const Text = styled.h2`
+    font-size: 30px;
+    color: #e31b6d;
+    border-bottom: 1px solid #e31b6d;
+    margin-bottom: 3rem
+`;
 const Goals = styled.div`
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
-    margin-bottom: 5rem
+    margin-bottom: 5rem;
+    @media screen and (max-width: 999px) {
+        justify-content: space-evenly
+    }
 `;
 
-const Goal = styled.div(props => ({
-    minWidth: '250px',
-    width: '20%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-}));
+const Goal = styled.div`
+    min-width:  250px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 999px) {
+        width: 35%;
+    }
+`;
 
 const GoalTitle = styled.h2`
     margin: 0.5rem 0;
@@ -132,36 +153,30 @@ const GoalDescription = styled.p`
     font-size: 20px
 `;
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1440px;
-    width: 100%;
-    margin-bottom: 13.9vh;
-`;
 
-const Text = styled.h2`
-    font-size: 30px;
-    color: #e31b6d;
-    border-bottom: 1px solid #e31b6d;
-`;
 
 const AboutContainer = styled.div`
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const AboutMe = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
+    width: 30%;
+    @media screen and (max-width: 900px) {
+        width: 60%;
+        margin-bottom: 3rem;
+    }
 `;
 
 const PortfolioPic = styled.div`
-    /* background-color: red; */
     background-image: url(${Port});
     background-position: center;
     background-size: cover;
@@ -181,7 +196,11 @@ const Skils = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 55%;
+    margin-right: 2rem;
+    @media screen and (max-width: 900px) {
+        width: 60%;
+    }
 `;
 
 const SkilItems = styled.div`
@@ -193,31 +212,27 @@ const SkilItems = styled.div`
 `;
 
 const SkilName = styled.div`
-    width: 20%;
+    width: 30%;
     height: 30px;
     background-color: #04c2c9;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 500px) {
+        font-size: small;
+    }
+    @media screen and (${device.mobileM}) {
+        font-size: x-small;
+    }
 `
-
-// const SkilInPercents = styled.div(props => ({
-//     backgroundColor: '#eee',
-//     width: '60%',
-//     height: '30px',
-//     color: 'white',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'flex-end'
-// }));
 const SkilInPercents = styled.div`
     background-color: #eee;
-    width: 60%;
+    width: 70%;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px
+    padding-right: 0.5rem
 `;
 
 const SkilPercent = styled.div(props => ({
@@ -226,7 +241,15 @@ const SkilPercent = styled.div(props => ({
     backgroundColor: '#00a1a7'
 }))
 
+
 const Percent = styled.span`
-    color: #666
+    margin-left: 0.5rem;
+    color: #666;
+    @media screen and (max-width: 500px) {
+        font-size: small;
+    }
+    @media screen and (${device.mobileM}) {
+        font-size: x-small;
+    }
 `
 

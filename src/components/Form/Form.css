@@ -1,7 +1,8 @@
 form {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
+    margin-left: 3rem;
 }
 
 .inputs {
@@ -19,15 +20,17 @@ form {
     font-weight: bolder;
 }
 
-input , textarea {
+input, textarea, button {
     border: none;
     outline: none;
-    background: transparent;
+    background-color: rgba(30, 36, 44, 0.4);
+    color: silver;
+}
+
+input , textarea {
     width: 100%;
     height: 40px;
     font-size: large;
-    color: silver;
-    background-color: rgba(30, 36, 44, 0.4);
     padding-left: 1rem;
     box-sizing: border-box;
 }
@@ -56,11 +59,37 @@ input::placeholder, textarea::placeholder {
 
 .send-message {
     margin-top: 1rem;
-    width: 40%;
+    font-size: larger;
+    font-weight: 600;
+    line-height: 2;
+    width: 30%;
     border: 1px solid silver;
     background-color: rgba(30, 36, 44, 0.4);
 }
 
 .send-message:hover {
     cursor: pointer;
+    font-weight: 700;
+    border: 1px solid #e31b6d;
+    background-color: #e31b6d;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 550px) {
+    form {
+        width: 80%
+    }
+}
+
+@media screen and (max-width: 425px) {
+    form {
+        margin: 0 auto;
+    }
+    .send-message {
+        font-size: smaller;
+    }
 }

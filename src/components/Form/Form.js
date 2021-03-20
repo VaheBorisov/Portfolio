@@ -3,13 +3,8 @@ import React, { Component } from 'react';
 import './Form.css'
 
 export default class Form extends Component {
-    constructor() {
-        super()
-    }
-
-
+    
     render() {
-
 
         return(
             <form >
@@ -33,7 +28,7 @@ export default class Form extends Component {
                     </label>
                 </div>
 
-                <input type="submit" value="Send Message" className='send-message'/>
+                <button type="submit" value="Submit" className='send-message'>Submit</button>
             </form>
         )
     }
