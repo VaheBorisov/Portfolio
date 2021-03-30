@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../mediaBreakPoints';
 
 export default function Home() {
 
@@ -21,7 +22,10 @@ const Welcome = styled.div`
 const Text = styled.h1`
     color: white;
     font-weight: 400;
-    font-size: 50px
+    font-size: 50px;
+  @media screen and (${device.tablet}) {
+    font-size: 30px;
+  }
 `;
 
 const FullName = styled.span`

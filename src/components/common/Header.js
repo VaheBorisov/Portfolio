@@ -33,19 +33,19 @@ function Header(props) {
                 <NavToSocial>
 
                     <LinkToSocial href="https://www.facebook.com/Vahe.Borisov.99" target="_blank">
-                        <FaFacebookSquare size="25px" color="#0000ff"/>
+                        <FaFacebookSquare size="25px" color="#fff"/>
                     </LinkToSocial>
 
                     <LinkToSocial href="https://github.com/VaheBorisov" target="_blank">
-                        <FaGithub size="25px" color="black"/>
+                        <FaGithub size="25px" color="#ffffff"/>
                     </LinkToSocial>
 
                     <LinkToSocial href="https://www.linkedin.com/in/vaheborisovofficial/" target="_blank">
-                        <FaLinkedin size="25px" color="#003399"/>
+                        <FaLinkedin size="25px" color="#fff"/>
                     </LinkToSocial>
 
                     <LinkToSocial href="https://twitter.com/Vahe32512937" target="_blank">
-                        <FaTwitter size="25px" color="#0000ff"/>
+                        <FaTwitter size="25px" color="#fff"/>
                     </LinkToSocial>
 
                 </NavToSocial>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Form from './Form/Form';
@@ -9,9 +9,8 @@ import { FaFacebookSquare, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/f
 
 import { device } from '../mediaBreakPoints'
 
-export default class Contact extends Component {
+export default function Contact() {
 
-    render() {
 
         return (
             <Container>
@@ -64,7 +63,6 @@ export default class Contact extends Component {
 
             </Container>
         )
-    }
 }
 
 const Container = styled.div`

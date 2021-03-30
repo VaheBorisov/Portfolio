@@ -11,7 +11,7 @@ const size = {
 export const device = Object.keys(size).reduce((acc, cur) => {  
     acc[cur] = `max-width: ${size[cur]}`;  
     return acc;  
-}, {});  
+}, {});
 
 
   
